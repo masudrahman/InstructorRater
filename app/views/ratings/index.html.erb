@@ -1,0 +1,21 @@
+<h1 class= "text-center">Listing ratings for each professor</h1>
+
+<div class = "container text-center">
+  <table class = "table table-striped">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>University</th>
+      <th>Comments</th>
+    </tr>
+   
+    <% @ratings.each do |rating| %>
+      <tr>
+        <td><%= rating.first_name %></td>
+        <td><%= rating.last_name %></td>
+        <td><%= rating.university %></td>
+        <td><%= rating.comments %></td>
+      </tr>
+    <% end %>
+  </table>
+</div> 

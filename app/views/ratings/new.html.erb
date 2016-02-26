@@ -2,7 +2,7 @@
 	<h1 class="text-center">New Professor Rating</h1>
 
 	<div class="text-center">
-		<%= form_for :rating do |f| %>
+		<%= form_for :rating, url: ratings_path do |f| %>
 		  <p>
 		    <%= f.label :first_name %><br>
 		    <%= f.text_field :first_name %>
@@ -11,6 +11,11 @@
 		  <p>
 		    <%= f.label :last_name %><br>
 		    <%= f.text_field :last_name %>
+		  </p>
+
+		  <p>
+		    <%= f.label :university %><br>
+		    <%= f.text_field :university %>
 		  </p>
 
 		  <p>

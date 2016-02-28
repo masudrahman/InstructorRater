@@ -5,17 +5,17 @@
 		<%= form_for :rating, url: ratings_path do |f| %>
 		  <p>
 		    <%= f.label :first_name %><br>
-		    <%= f.text_field :first_name %>
+		    <%= f.collection_select :profile_id, Profile.all, :id, :first_name %>
 		  </p>
 	 
 		  <p>
 		    <%= f.label :last_name %><br>
-		    <%= f.text_field :last_name %>
+		    <%= f.collection_select :profile_id, Profile.all, :id, :last_name %>
 		  </p>
 
 		  <p>
 		    <%= f.label :university %><br>
-		    <%= f.text_field :university %>
+		    <%= f.collection_select :profile_id, Profile.all, :id, :university %>
 		  </p>
 
 		  <p>

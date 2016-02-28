@@ -21,7 +21,7 @@ class RatingsController < ApplicationController
 
 	private
 	  def rating_params
-	    params.require(:rating).permit(:first_name, :last_name, :university, :score, :comments)
+	    params.require(:rating).permit(:profile_id, :profile_id, :profile_id, :score, :comments)
 	  end
 
 	  def sort_column

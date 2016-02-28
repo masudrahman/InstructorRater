@@ -4,6 +4,7 @@ class CreateRatings < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.string :university
+      t.integer :score
       t.text :comments
 
       t.timestamps null: false

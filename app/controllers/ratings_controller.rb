@@ -1,7 +1,8 @@
 class RatingsController < ApplicationController
-	
+	helper_method :sort_column, :sort_direction
+
 	def index
-		@ratings = Rating.all
+		@ratings = Rating.order(sort_column + " " + sort_direction)
 	end
 
 	def show
@@ -20,7 +21,15 @@ class RatingsController < ApplicationController
 
 	private
 	  def rating_params
-	    params.require(:rating).permit(:first_name, :last_name, :university, :comments)
+	    params.require(:rating).permit(:first_name, :last_name, :university, :score, :comments)
+	  end
+
+	  def sort_column
+	  	params[:sort] || "score"
+	  end
+
+	  def sort_direction
+	  	params[:direction] || "desc"
 	  end
 
 end

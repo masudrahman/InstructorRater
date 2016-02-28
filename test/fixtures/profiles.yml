@@ -4,12 +4,10 @@ one:
   first_name: MyString
   last_name: MyString
   university: MyString
-  score: 1
-  comments: MyText
+  description: MyText
 
 two:
   first_name: MyString
   last_name: MyString
   university: MyString
-  score: 1
-  comments: MyText
+  description: MyText

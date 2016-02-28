@@ -1,0 +1,30 @@
+<h1 class= "text-center">Professor Profiles</h1>
+
+<div class = "container">
+  <table class = "table table-striped table-bordered">
+    <tr>
+      <th><%= sortable "first_name" %></th>
+      <th><%= sortable "last_name" %></th>
+      <th><%= sortable "university" %></th>
+    </tr>
+  
+    <% @profiles.each do |profile| %>
+      <tr>
+        <td><%= profile.first_name %></td>
+        <td><%= profile.last_name %></td>
+        <td><%= profile.university %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <div class = "text-center">
+
+    <a class="btn btn-default text-center" href="profiles/new" role="button">New Professor Profile</a>
+
+    <a class="btn btn-default text-center" href="ratings/index" role="button">Professor Ratings</a>
+
+  </div>
+
+
+
+</div> 
